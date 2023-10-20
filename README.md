@@ -10,7 +10,7 @@ This program requires an API key to function. You may sign up for a free API key
 Installation
 ============
 ```bash
-go install github.com/ip2location/ip2location-io-cli/ip2locationio
+go install github.com/ip2location/ip2location-io-cli/ip2locationio@latest
 ```
 
 
