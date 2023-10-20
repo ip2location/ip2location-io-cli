@@ -51,10 +51,14 @@ func SaveConfig() {
 		} else {
 			byteValue, err := json.Marshal(&config)
 
-			_, err = file.Write(byteValue)
-
 			if err != nil {
 				fmt.Println(err)
+			} else {
+				_, err = file.Write(byteValue)
+
+				if err != nil {
+					fmt.Println(err)
+				}
 			}
 		}
 
