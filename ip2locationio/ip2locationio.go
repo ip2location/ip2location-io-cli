@@ -15,7 +15,7 @@ var myLanguage string
 var myIP string
 var filterFields string
 
-const version string = "1.0.0"
+const version string = "1.0.1"
 const programName string = "IP2Location.io Command Line"
 
 var showVer bool = false
@@ -70,8 +70,11 @@ func main() {
 	} else if arg == "range2cidr" {
 		PrintRange2CIDR(flag.Arg(1), flag.Arg(2))
 		return
-	} else if len(arg) == 0 || (!IsIPv4(arg) && !IsIPv6(arg)) {
+	} else if len(arg) == 0 {
 		myIP = MyPublicIP()
+	} else if !IsIPv4(arg) && !IsIPv6(arg) {
+		fmt.Println("Not a valid IP address.")
+		return
 	} else {
 		myIP = arg
 	}
