@@ -6,9 +6,11 @@ This Go command line tool enables user to query for an enriched data set, such a
 
 This program requires an API key to function. You may sign up for a free API key at https://www.ip2location.io/pricing.
 
-
 Installation
 ============
+
+#### Go Installation
+
 ```bash
 go install github.com/ip2location/ip2location-io-cli/ip2locationio@latest
 ```
