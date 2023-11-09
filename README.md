@@ -14,8 +14,19 @@ go install github.com/ip2location/ip2location-io-cli/ip2locationio@latest
 ```
 
 
+
+#### Debian/Ubuntu (amd64)
+
+```bash
+curl -LO https://github.com/ip2location/ip2location-io-cli/releases/download/v1.0.1/ip2location-io-1.0.1.deb
+sudo dpkg -i ip2location-io-1.0.1.deb
+```
+
+
+
 Usage Examples
 ==============
+
 ### Display help
 ```bash
 ip2locationio -h
