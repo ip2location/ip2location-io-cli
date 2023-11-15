@@ -34,6 +34,15 @@ curl -LO https://github.com/ip2location/ip2location-io-cli/releases/download/v1.
 sudo dpkg -i ip2location-io-1.0.1.deb
 ```
 
+#### Ubuntu
+
+```
+sudo add-apt-repository ppa:ip2location/ip2locationio
+sudo apt update
+sudo apt install ip2location-io
+```
+
+
 
 Usage Examples
 ==============
