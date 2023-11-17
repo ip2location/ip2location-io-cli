@@ -15,7 +15,7 @@ var myLanguage string
 var myIP string
 var filterFields string
 
-const version string = "1.0.1"
+const version string = "1.0.2"
 const programName string = "IP2Location.io Command Line"
 
 var showVer bool = false
