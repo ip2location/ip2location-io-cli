@@ -10,7 +10,7 @@ This program requires an API key to function. You may sign up for a free API key
 Installation
 ============
 
-#### Go Installation
+#### `go install` Installation
 
 ```bash
 go install github.com/ip2location/ip2location-io-cli/ip2locationio@latest
@@ -30,18 +30,70 @@ $GOPATH/bin/ip2locationio
 #### Debian/Ubuntu (amd64)
 
 ```bash
-curl -LO https://github.com/ip2location/ip2location-io-cli/releases/download/v1.0.1/ip2location-io-1.0.1.deb
-sudo dpkg -i ip2location-io-1.0.1.deb
+curl -LO https://github.com/ip2location/ip2location-io-cli/releases/download/v1.0.2/ip2location-io-1.0.2.deb
+sudo dpkg -i ip2location-io-1.0.2.deb
 ```
 
-#### Ubuntu
 
-```
+#### Ubuntu PPA
+
+```bash
 sudo add-apt-repository ppa:ip2location/ip2locationio
 sudo apt update
 sudo apt install ip2location-io
 ```
 
+
+### Windows Powershell
+
+Launch Powershell as administrator then run the below:
+
+```bash
+iwr -useb https://github.com/ip2location/ip2location-io-cli/releases/download/v1.0.2/windows.ps1 | iex
+```
+
+
+### Download pre-built binaries
+
+Supported OS/architectures below:
+
+```
+darwin_amd64
+darwin_arm64
+dragonfly_amd64
+freebsd_386
+freebsd_amd64
+freebsd_arm
+freebsd_arm64
+linux_386
+linux_amd64
+linux_arm
+linux_arm64
+netbsd_386
+netbsd_amd64
+netbsd_arm
+netbsd_arm64
+openbsd_386
+openbsd_amd64
+openbsd_arm
+openbsd_arm64
+solaris_amd64
+windows_386
+windows_amd64
+windows_arm
+```
+
+After choosing a platform `PLAT` from above, run:
+
+```bash
+# for Windows, use ".zip" instead of ".tar.gz"
+curl -LO https://github.com/ip2location/ip2location-io-cli/releases/download/v1.0.2/ip2locationio_1.0.2_${PLAT}.tar.gz
+# OR
+wget https://github.com/ip2location/ip2location-io-cli/releases/download/v1.0.2/ip2locationio_1.0.2_${PLAT}.tar.gz
+
+tar -xvf ip2locationio_1.0.2_${PLAT}.tar.gz
+mv ip2locationio_1.0.2_${PLAT} /usr/local/bin/ip2locationio
+```
 
 
 Usage Examples
