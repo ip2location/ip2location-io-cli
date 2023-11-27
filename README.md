@@ -159,6 +159,11 @@ ip2locationio cidr2list <CIDR>
 ip2locationio range2list <START IP> <END IP>
 ```
 
+### Split a larger CIDR into smaller ones
+```bash
+ip2locationio splitcidr <CIDR> <SPLIT>
+```
+
 
 Example API Response
 ====================

@@ -15,7 +15,7 @@ var myLanguage string
 var myIP string
 var filterFields string
 
-const version string = "1.0.2"
+const version string = "1.1.0"
 const programName string = "IP2Location.io Command Line"
 
 var showVer bool = false
@@ -69,6 +69,9 @@ func main() {
 		return
 	} else if arg == "range2cidr" {
 		PrintRange2CIDR(flag.Arg(1), flag.Arg(2))
+		return
+	} else if arg == "splitcidr" {
+		PrintSplitCIDR(flag.Arg(1), flag.Arg(2))
 		return
 	} else if len(arg) == 0 {
 		myIP = MyPublicIP()
@@ -175,6 +178,18 @@ func PrintRange2CIDR(fromIP string, toIP string) {
 				fmt.Println(element)
 			}
 		}
+	} else {
+		for _, element := range res {
+			fmt.Println(element)
+		}
+	}
+}
+
+func PrintSplitCIDR(cidr string, split string) {
+	res, err := SplitCIDR(cidr, split)
+
+	if err != nil {
+		fmt.Println(err)
 	} else {
 		for _, element := range res {
 			fmt.Println(element)
@@ -318,6 +333,10 @@ To list out the IPs in a CIDR
 To list out the IPs in a range
 
   Usage: EXE range2list <START IP> <END IP>
+
+To split a larger CIDR into smaller ones
+
+  Usage: EXE splitcidr <CIDR> <SPLIT>
 `
 
 	usage = strings.ReplaceAll(usage, "EXE", os.Args[0])
