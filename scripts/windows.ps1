@@ -1,4 +1,4 @@
-$VERSION = "1.0.2"
+$VERSION = "1.1.0"
 
 $FileName = "ip2locationio_$($VERSION)_windows_amd64"
 $ZipFileName = "$($FileName).zip"

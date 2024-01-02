@@ -1,4 +1,8 @@
-ip2location-io (1.0.1) jammy; urgency=medium
+ip2location-io (1.1.0) jammy; urgency=medium
+
+  * 1.1.0 added SplitCIDR function.
+
+ -- IP2Location <support@ip2location.io>  Mon, 27 Nov 2023 14:05:36 +0800
 
   * 1.0.1 release.
 

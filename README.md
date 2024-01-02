@@ -30,8 +30,8 @@ $GOPATH/bin/ip2locationio
 #### Debian/Ubuntu (amd64)
 
 ```bash
-curl -LO https://github.com/ip2location/ip2location-io-cli/releases/download/v1.0.2/ip2location-io-1.0.2.deb
-sudo dpkg -i ip2location-io-1.0.2.deb
+curl -LO https://github.com/ip2location/ip2location-io-cli/releases/download/v1.1.0/ip2location-io-1.1.0.deb
+sudo dpkg -i ip2location-io-1.1.0.deb
 ```
 
 
@@ -49,7 +49,7 @@ sudo apt install ip2location-io
 Launch Powershell as administrator then run the below:
 
 ```bash
-iwr -useb https://github.com/ip2location/ip2location-io-cli/releases/download/v1.0.2/windows.ps1 | iex
+iwr -useb https://github.com/ip2location/ip2location-io-cli/releases/download/v1.1.0/windows.ps1 | iex
 ```
 
 
@@ -87,12 +87,12 @@ After choosing a platform `PLAT` from above, run:
 
 ```bash
 # for Windows, use ".zip" instead of ".tar.gz"
-curl -LO https://github.com/ip2location/ip2location-io-cli/releases/download/v1.0.2/ip2locationio_1.0.2_${PLAT}.tar.gz
+curl -LO https://github.com/ip2location/ip2location-io-cli/releases/download/v1.1.0/ip2locationio_1.1.0_${PLAT}.tar.gz
 # OR
-wget https://github.com/ip2location/ip2location-io-cli/releases/download/v1.0.2/ip2locationio_1.0.2_${PLAT}.tar.gz
+wget https://github.com/ip2location/ip2location-io-cli/releases/download/v1.1.0/ip2locationio_1.1.0_${PLAT}.tar.gz
 
-tar -xvf ip2locationio_1.0.2_${PLAT}.tar.gz
-mv ip2locationio_1.0.2_${PLAT} /usr/local/bin/ip2locationio
+tar -xvf ip2locationio_1.1.0_${PLAT}.tar.gz
+mv ip2locationio_1.1.0_${PLAT} /usr/local/bin/ip2locationio
 ```
 
 
