@@ -53,6 +53,14 @@ iwr -useb https://github.com/ip2location/ip2location-io-cli/releases/download/v1
 ```
 
 
+### Scoop
+
+```bash
+scoop bucket add extras
+scoop install ip2location-io-cli
+```
+
+
 ### Download pre-built binaries
 
 Supported OS/architectures below:
