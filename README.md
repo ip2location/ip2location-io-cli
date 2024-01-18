@@ -56,8 +56,6 @@ makepkg -si
 curl -Ls https://raw.githubusercontent.com/ip2location/ip2location-io-cli/main/scripts/macos.sh | sh
 ```
 
-
-
 ### Windows Powershell
 
 Launch Powershell as administrator then run the below:
