@@ -43,6 +43,13 @@ sudo apt update
 sudo apt install ip2location-io
 ```
 
+#### Arch Linux
+
+```
+git clone https://aur.archlinux.org/ip2location-io-cli.git
+makepkg -si
+```
+
 #### MacOS
 
 ```
