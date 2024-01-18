@@ -43,6 +43,13 @@ sudo apt update
 sudo apt install ip2location-io
 ```
 
+#### MacOS
+
+```
+curl -Ls https://raw.githubusercontent.com/ip2location/ip2location-io-cli/main/scripts/macos.sh | sh
+```
+
+
 
 ### Windows Powershell
 
