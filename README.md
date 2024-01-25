@@ -46,7 +46,7 @@ sudo apt install ip2location-io
 #### Arch Linux
 
 ```
-git clone https://aur.archlinux.org/ip2location-io-cli.git
+git clone https://aur.archlinux.org/ip2location-io-cli.git && cd ip2location-io-cli
 makepkg -si
 ```
 
