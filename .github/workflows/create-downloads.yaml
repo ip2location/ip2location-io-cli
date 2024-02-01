@@ -56,5 +56,5 @@ jobs:
           ./build/${{ env.CLI_NAME }}_${{ env.CLI_VERSION }}*.zip
           ./build/ip2location-io-${{ env.CLI_VERSION }}*.deb
           # ./${{ env.CLI_NAME }}/macos.sh
-          ./scripts/windows.ps1
+          # ./scripts/windows.ps1
           # ./${{ env.CLI_NAME }}/deb.sh

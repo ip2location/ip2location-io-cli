@@ -4,8 +4,9 @@ IP2Location.io Go CLI
 =====================
 This Go command line tool enables user to query for an enriched data set, such as country, region, district, city, latitude & longitude, ZIP code, time zone, ASN, ISP, domain, net speed, IDD code, area code, weather station data, MNC, MCC, mobile brand, elevation, usage type, address type, advertisement category and proxy data with an IP address. It supports both IPv4 and IPv6 address lookup.
 
-This program requires an API key to function. You may sign up for a free API key at https://www.ip2location.io/pricing.
+This program requires an API key to unlock more queries and data fields. You may sign up for a free API key at https://www.ip2location.io/pricing.
 
+If you don't use an API key, you'll be limited to 500 IP geolocation queries per day.
 
 Installation
 ============
@@ -30,8 +31,8 @@ $GOPATH/bin/ip2locationio
 #### Debian/Ubuntu (amd64)
 
 ```bash
-curl -LO https://github.com/ip2location/ip2location-io-cli/releases/download/v1.1.0/ip2location-io-1.1.0.deb
-sudo dpkg -i ip2location-io-1.1.0.deb
+curl -LO https://github.com/ip2location/ip2location-io-cli/releases/download/v1.2.0/ip2location-io-1.2.0.deb
+sudo dpkg -i ip2location-io-1.2.0.deb
 ```
 
 
@@ -61,7 +62,7 @@ curl -Ls https://raw.githubusercontent.com/ip2location/ip2location-io-cli/main/s
 Launch Powershell as administrator then run the below:
 
 ```bash
-iwr -useb https://github.com/ip2location/ip2location-io-cli/releases/download/v1.1.0/windows.ps1 | iex
+iwr -useb https://github.com/ip2location/ip2location-io-cli/main/scripts/windows.ps1 | iex
 ```
 
 
@@ -107,12 +108,12 @@ After choosing a platform `PLAT` from above, run:
 
 ```bash
 # for Windows, use ".zip" instead of ".tar.gz"
-curl -LO https://github.com/ip2location/ip2location-io-cli/releases/download/v1.1.0/ip2locationio_1.1.0_${PLAT}.tar.gz
+curl -LO https://github.com/ip2location/ip2location-io-cli/releases/download/v1.2.0/ip2locationio_1.2.0_${PLAT}.tar.gz
 # OR
-wget https://github.com/ip2location/ip2location-io-cli/releases/download/v1.1.0/ip2locationio_1.1.0_${PLAT}.tar.gz
+wget https://github.com/ip2location/ip2location-io-cli/releases/download/v1.2.0/ip2locationio_1.2.0_${PLAT}.tar.gz
 
-tar -xvf ip2locationio_1.1.0_${PLAT}.tar.gz
-mv ip2locationio_1.1.0_${PLAT} /usr/local/bin/ip2locationio
+tar -xvf ip2locationio_1.2.0_${PLAT}.tar.gz
+mv ip2locationio_1.2.0_${PLAT} /usr/local/bin/ip2locationio
 ```
 
 

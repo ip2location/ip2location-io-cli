@@ -15,7 +15,7 @@ var myLanguage string
 var myIP string
 var filterFields string
 
-const version string = "1.1.0"
+const version string = "1.2.0"
 const programName string = "IP2Location.io Command Line"
 
 var showVer bool = false
@@ -27,6 +27,7 @@ func init() {
 
 	// read config for API key if exist
 	LoadConfig()
+	apiKey = config.APIKey
 }
 
 func main() {

@@ -1,4 +1,8 @@
-ip2location-io (1.1.0) jammy; urgency=medium
+ip2location-io (1.2.0) jammy; urgency=medium
+
+  * 1.2.0 added ability to query without API key.
+
+ -- IP2Location <support@ip2location.io>  Thu, 1 Feb 2024 12:00:36 +0800
 
   * 1.1.0 added SplitCIDR function.
 

@@ -11,6 +11,6 @@ Vcs-browser: https://github.com/ip2location/ip2location-io-cli
 Homepage: https://www.ip2location.io
 XS-Go-Import-Path: github.com/ip2location/ip2location-io-cli
 Package: ip2location-io
-Version: 1.1.0
+Version: 1.2.0
 Architecture: amd64
 Description: This is the official CLI for the IP2Location.io IP Geolocation API.

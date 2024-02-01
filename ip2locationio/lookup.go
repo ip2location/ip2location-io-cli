@@ -50,7 +50,11 @@ func LookUpJSON(ip string, lang string) (string, error) {
 	var res string
 	var ex IPGeolocationError
 
-	myUrl := "https://api.ip2location.io?key=" + url.QueryEscape(apiKey) + "&ip=" + url.QueryEscape(ip) + "&lang=" + url.QueryEscape(lang) + "&source=sdk-cli-iplio&source_version=" + version
+	myUrl := "https://api.ip2location.io?ip=" + url.QueryEscape(ip) + "&source=sdk-cli-iplio&source_version=" + version
+
+	if strings.TrimSpace(apiKey) != "" {
+		myUrl = myUrl + "&key=" + url.QueryEscape(apiKey) + "&lang=" + url.QueryEscape(lang)
+	}
 
 	resp, err := http.Get(myUrl)
 
@@ -96,7 +100,11 @@ func LookUpMap(ip string, lang string) (map[string]interface{}, error) {
 	var res map[string]interface{}
 	var ex IPGeolocationError
 
-	myUrl := "https://api.ip2location.io?key=" + url.QueryEscape(apiKey) + "&ip=" + url.QueryEscape(ip) + "&lang=" + url.QueryEscape(lang) + "&source=sdk-cli-iplio&source_version=" + version
+	myUrl := "https://api.ip2location.io?ip=" + url.QueryEscape(ip) + "&source=sdk-cli-iplio&source_version=" + version
+
+	if strings.TrimSpace(apiKey) != "" {
+		myUrl = myUrl + "&key=" + url.QueryEscape(apiKey) + "&lang=" + url.QueryEscape(lang)
+	}
 
 	resp, err := http.Get(myUrl)
 
