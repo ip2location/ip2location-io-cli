@@ -62,7 +62,7 @@ curl -Ls https://raw.githubusercontent.com/ip2location/ip2location-io-cli/main/s
 Launch Powershell as administrator then run the below:
 
 ```bash
-iwr -useb https://github.com/ip2location/ip2location-io-cli/main/scripts/windows.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/ip2location/ip2location-io-cli/main/scripts/windows.ps1 | iex
 ```
 
 
