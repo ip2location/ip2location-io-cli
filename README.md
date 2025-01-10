@@ -2,7 +2,7 @@
 
 IP2Location.io Go CLI
 =====================
-This Go command line tool enables user to query for an enriched data set, such as country, region, district, city, latitude & longitude, ZIP code, time zone, ASN, ISP, domain, net speed, IDD code, area code, weather station data, MNC, MCC, mobile brand, elevation, usage type, address type, advertisement category and proxy data with an IP address. It supports both IPv4 and IPv6 address lookup.
+This Go command line tool enables user to query for an enriched data set, such as country, region, district, city, latitude & longitude, ZIP code, time zone, ASN, ISP, domain, net speed, IDD code, area code, weather station data, MNC, MCC, mobile brand, elevation, usage type, address type, advertisement category, fraud score and proxy data with an IP address. It supports both IPv4 and IPv6 address lookup.
 
 This program requires an API key to unlock more queries and data fields. You may sign up for a free API key at https://www.ip2location.io/pricing.
 
@@ -280,6 +280,7 @@ Example API Response
   "ads_category": "IAB19-11",
   "ads_category_name": "Data Centers",
   "is_proxy": false,
+  "fraud_score": 0,
   "proxy": {
     "last_seen": 3,
     "proxy_type": "DCH",
