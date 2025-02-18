@@ -6,7 +6,7 @@ This Go command line tool enables user to query for an enriched data set, such a
 
 This program requires an API key to unlock more queries and data fields. You may sign up for a free API key at https://www.ip2location.io/pricing.
 
-If you don't use an API key, you'll be limited to 500 IP geolocation queries per day.
+If you don't use an API key, you'll be limited to 1000 IP geolocation queries per day.
 
 Installation
 ============
