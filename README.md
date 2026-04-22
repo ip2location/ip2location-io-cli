@@ -292,6 +292,7 @@ Example API Response
     "is_public_proxy": false,
     "is_web_proxy": false,
     "is_web_crawler": false,
+    "is_ai_crawler": false,
     "is_residential_proxy": false,
     "is_spammer": false,
     "is_scanner": false,
