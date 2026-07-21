@@ -1,5 +1,3 @@
-[![Go Report Card](https://goreportcard.com/badge/github.com/ip2location/ip2location-io-cli)](https://goreportcard.com/report/github.com/ip2location/ip2location-io-cli)
-
 IP2Location.io Go CLI
 =====================
 This Go command line tool enables user to query for an enriched data set, such as country, region, district, city, latitude & longitude, ZIP code, time zone, ASN, ISP, domain, net speed, IDD code, area code, weather station data, MNC, MCC, mobile brand, elevation, usage type, address type, advertisement category, fraud score and proxy data with an IP address. It supports both IPv4 and IPv6 address lookup.
