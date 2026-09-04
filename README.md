@@ -1,10 +1,30 @@
 IP2Location.io Go CLI
 =====================
-This Go command line tool enables user to query for an enriched data set, such as country, region, district, city, latitude & longitude, ZIP code, time zone, ASN, ISP, domain, net speed, IDD code, area code, weather station data, MNC, MCC, mobile brand, elevation, usage type, address type, advertisement category, fraud score and proxy data with an IP address. It supports both IPv4 and IPv6 address lookup.
+A command-line tool for querying **IP geolocation, ASN, network, and proxy information** from the [IP2Location.io](https://www.ip2location.io/) API.
 
-This program requires an API key to unlock more queries and data fields. You may sign up for a free API key at https://www.ip2location.io/pricing.
+`ip2locationio` supports IPv4 and IPv6 lookups and is designed for developers who want IP intelligence directly from a terminal, shell script, CI job, or troubleshooting workflow.
 
-If you don't use an API key, you'll be limited to 1000 IP geolocation queries per day.
+Depending on the API plan, a lookup can return data such as country, region, city, ZIP/postal code, latitude and longitude, time zone, ASN, autonomous system name, ISP, domain, usage type, mobile network information, and proxy or security signals.
+
+## Features
+- Look up IPv4 and IPv6 geolocation from the command line.
+- Query your own public IP address without supplying an IP argument.
+- Retrieve ASN and network information alongside geolocation data.
+- Output results as JSON or pretty-printed JSON.
+- Select specific response fields for scripts and command-line workflows.
+- Configure an API key once or pass one with `-k`.
+- Request translated location data on supported plans.
+- Generate random IPv4 addresses.
+- Convert between CIDR blocks and IP ranges.
+- List addresses in a CIDR or IP range.
+- Split a larger CIDR into smaller CIDR blocks.
+
+> [!NOTE]
+> Available IP attributes depend on your IP2Location.io API plan.
+
+No API key is required for limited keyless API usage. IP2Location.io currently allows up to **1,000 keyless IP geolocation queries per day**. A free API key provides up to **50,000 IP geolocation queries per month** according to the Free plan.
+
+See [IP2Location.io pricing](https://www.ip2location.io/pricing) for current limits and plan details.
 
 Installation
 ============
@@ -186,6 +206,8 @@ ip2locationio splitcidr <CIDR> <SPLIT>
 
 Example API Response
 ====================
+The exact response depends on your API plan. A response can include fields such as:
+
 ```json
 {
   "ip": "8.8.8.8",
@@ -298,8 +320,90 @@ Example API Response
   }
 }
 ```
+For the complete list of available fields, see the [IP2Location.io IP Geolocation API documentation](https://www.ip2location.io/ip2location-documentation).
 
+## Common Developer Use Cases
 
-LICENCE
-=====================
-See the LICENSE file.
+The CLI is useful when you want to inspect IP data without writing an API client first. Typical workflows include:
+
+- Investigating an IP address from application or server logs.
+- Checking the approximate country, region, city, or time zone of an IP.
+- Looking up an ASN or network operator during troubleshooting.
+- Enriching IP addresses in shell scripts or development tools.
+- Checking proxy or network attributes when available on your API plan.
+- Converting CIDR blocks and IP ranges while working with network configuration.
+
+IP geolocation is approximate network intelligence. It should not be treated as GPS-level location or proof of a person's physical location.
+
+## API or Local Database?
+
+IP2Location provides two main approaches for developers who need IP geolocation or network data:
+
+| Approach | Best for |
+| --- | --- |
+| **IP2Location.io API** | CLI tools, applications, scripts, and services that want a hosted IP geolocation API |
+| **IP2Location LITE Database** | Applications that want to perform IP geolocation locally on their own infrastructure |
+| **ASN LITE Database** | Local IP-to-ASN and autonomous system lookups |
+| **IP2Proxy LITE Database** | Local proxy, VPN, and related network detection |
+
+This CLI uses the **IP2Location.io API**.
+
+If your application needs local database lookups instead of an external API request, see the free downloadable databases at [IP2Location LITE](https://www.ip2location.com/database/lite).
+## FAQ
+
+### Is there a free IP geolocation service for developers?
+
+Yes. **IP2Location.io** supports limited keyless IP geolocation queries and also provides a Free API plan for development, testing, scripts, and applications.
+
+For local lookup workflows, developers can use the free downloadable **IP2Location LITE** database on their own infrastructure. **ASN LITE** and **IP2Proxy LITE** databases are also available for ASN and proxy-related lookups.
+
+### What is an IP geolocation API used for?
+
+An IP geolocation API maps an IPv4 or IPv6 address to approximate geographic and network information such as country, city, coordinates, time zone, ASN, ISP, or proxy information.
+
+Developers commonly use this data for localization, analytics, log enrichment, troubleshooting, and security context.
+
+### Can this CLI be used for tracking IP addresses?
+
+The CLI performs point-in-time IP address lookups; it does not continuously track users or devices.
+
+Applications can enrich IP addresses from their own logs with location, ASN, and network information, but IP geolocation should not be treated as precise person or device tracking.
+
+### How do I look up my public IP address?
+
+Run:
+
+```bash
+ip2locationio
+```
+
+With no IP argument, the CLI determines your public IP and returns its available geolocation and network information.
+
+### What can I use for ASN and IP address lookup?
+
+This CLI can retrieve **IP geolocation and ASN information in the same API lookup**:
+
+```bash
+ip2locationio -f ip,asn,as 8.8.8.8
+```
+
+For applications that need local lookups, developers can also use the downloadable **IP2Location LITE** and **ASN LITE** databases.
+
+## IP Geolocation Accuracy
+
+IP geolocation estimates the location associated with an IP network. Results can be affected by VPNs, proxies, mobile carriers, corporate gateways, cloud infrastructure, and ISP routing.
+
+Country-level information is generally more reliable than an exact city or latitude/longitude. Do not use IP geolocation coordinates as a street address or precise device location.
+
+## Resources
+
+- [IP2Location.io](https://www.ip2location.io/)
+- [IP2Location.io IP Geolocation API Documentation](https://www.ip2location.io/ip2location-documentation)
+- [IP2Location.io Pricing](https://www.ip2location.io/pricing)
+- [IP2Location LITE Databases](https://www.ip2location.com/database/lite)
+- [IP2Location](https://www.ip2location.com/)
+- [GitHub Releases](https://github.com/ip2location/ip2location-io-cli/releases)
+
+## License
+
+See the [LICENSE](LICENSE) file.
