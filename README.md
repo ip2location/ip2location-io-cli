@@ -46,11 +46,21 @@ $GOPATH/bin/ip2locationio
 ```
 
 
-#### Debian/Ubuntu (amd64)
+#### Debian/Ubuntu
+
+Architecture-specific packages are available for `amd64` and `arm64`. Replace `amd64` with `arm64` on ARM machines:
 
 ```bash
-curl -LO https://github.com/ip2location/ip2location-io-cli/releases/download/v1.2.0/ip2location-io-1.2.0.deb
-sudo dpkg -i ip2location-io-1.2.0.deb
+curl -LO https://github.com/ip2location/ip2location-io-cli/releases/latest/download/ip2location-io-cli_amd64.deb
+sudo dpkg -i ip2location-io-cli_amd64.deb
+```
+
+A single-architecture package for `amd64` is also published as `ip2location-io-<version>.deb`:
+
+```bash
+TAG=$(curl -s https://api.github.com/repos/ip2location/ip2location-io-cli/releases/latest | awk -F'"' '/"tag_name"/ { print $4 }')
+curl -LO https://github.com/ip2location/ip2location-io-cli/releases/download/${TAG}/ip2location-io-${TAG#v}.deb
+sudo dpkg -i ip2location-io-${TAG#v}.deb
 ```
 
 
@@ -125,13 +135,17 @@ windows_arm
 After choosing a platform `PLAT` from above, run:
 
 ```bash
-# for Windows, use ".zip" instead of ".tar.gz"
-curl -LO https://github.com/ip2location/ip2location-io-cli/releases/download/v1.2.0/ip2locationio_1.2.0_${PLAT}.tar.gz
-# OR
-wget https://github.com/ip2location/ip2location-io-cli/releases/download/v1.2.0/ip2locationio_1.2.0_${PLAT}.tar.gz
+# Resolve the latest release tag
+TAG=$(curl -s https://api.github.com/repos/ip2location/ip2location-io-cli/releases/latest | awk -F'"' '/"tag_name"/ { print $4 }')
+ASSET=ip2locationio_${TAG#v}_${PLAT}
 
-tar -xvf ip2locationio_1.2.0_${PLAT}.tar.gz
-mv ip2locationio_1.2.0_${PLAT} /usr/local/bin/ip2locationio
+# For Windows, use ".zip" instead of ".tar.gz"
+curl -LO https://github.com/ip2location/ip2location-io-cli/releases/download/${TAG}/${ASSET}.tar.gz
+# OR
+wget https://github.com/ip2location/ip2location-io-cli/releases/download/${TAG}/${ASSET}.tar.gz
+
+tar -xvf ${ASSET}.tar.gz
+mv ${ASSET} /usr/local/bin/ip2locationio
 ```
 
 
